@@ -725,7 +725,6 @@ goog.require("fb.simplelogin.transports.Popup");
 goog.require("fb.simplelogin.Vars");
 goog.require("fb.simplelogin.util.json");
 goog.require("fb.simplelogin.util.misc");
-var popupTimeout = 4E4;
 fb.simplelogin.transports.CordovaInAppBrowser_ = function() {
 };
 fb.simplelogin.transports.CordovaInAppBrowser_.prototype.open = function(url, options, onComplete) {
@@ -769,11 +768,6 @@ fb.simplelogin.transports.CordovaInAppBrowser_.prototype.open = function(url, op
   windowRef.addEventListener("exit", function(event) {
     callbackHandler({code:"USER_DENIED", message:"User cancelled the authentication request."});
   });
-  setTimeout(function() {
-    if (windowRef && windowRef["close"]) {
-      windowRef["close"]();
-    }
-  }, popupTimeout);
 };
 fb.simplelogin.transports.CordovaInAppBrowser = new fb.simplelogin.transports.CordovaInAppBrowser_;
 goog.provide("fb.simplelogin.Errors");

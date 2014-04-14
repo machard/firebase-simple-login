@@ -6,13 +6,6 @@ goog.require('fb.simplelogin.util.json');
 goog.require('fb.simplelogin.util.misc');
 
 /**
- * Popup window timeout before close.
- * @const
- * @type {number}
- */
-var popupTimeout = 40000;
-
-/**
  * @constructor
  * @implements {fb.simplelogin.Popup}
  */
@@ -70,11 +63,6 @@ fb.simplelogin.transports.CordovaInAppBrowser_.prototype.open = function(url, op
     callbackHandler({ code: 'USER_DENIED', message: 'User cancelled the authentication request.' });
   });
 
-  setTimeout(function() {
-    if (windowRef && windowRef['close']) {
-      windowRef['close']();
-    }
-  }, popupTimeout);
 };
 
 /**
