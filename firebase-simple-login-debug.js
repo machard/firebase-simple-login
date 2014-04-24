@@ -1694,9 +1694,6 @@ fb.simplelogin.util.env.isTwitteriOS = function() {
 fb.simplelogin.util.env.isFacebookiOS = function() {
   return!!navigator.userAgent.match(/FBAN\/FBIOS/);
 };
-fb.simplelogin.util.env.isWindowsPhone = function() {
-  return!!navigator.userAgent.match(/Windows Phone/);
-};
 fb.simplelogin.util.env.isStandaloneiOS = function() {
   return!!window.navigator.standalone;
 };
@@ -3901,7 +3898,7 @@ fb.simplelogin.client.prototype.loginViaOAuth = function(provider, options, cb) 
       }
     }
   }
-  if (options.preferRedirect || (fb.simplelogin.util.env.isChromeiOS() || (fb.simplelogin.util.env.isWindowsPhone() || (fb.simplelogin.util.env.isStandaloneiOS() || (fb.simplelogin.util.env.isTwitteriOS() || fb.simplelogin.util.env.isFacebookiOS()))))) {
+  if (options.preferRedirect || (fb.simplelogin.util.env.isChromeiOS() || (fb.simplelogin.util.env.isStandaloneiOS() || (fb.simplelogin.util.env.isTwitteriOS() || fb.simplelogin.util.env.isFacebookiOS())))) {
     var requestId = goog.string.getRandomString() + goog.string.getRandomString();
     try {
       sessionStorage.setItem("firebaseRequestId", requestId);

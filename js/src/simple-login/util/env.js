@@ -78,13 +78,6 @@ fb.simplelogin.util.env.isFacebookiOS = function() {
 };
 
 /**
- * @return {boolean} isWindowsPhone
- */
-fb.simplelogin.util.env.isWindowsPhone = function() {
-  return !!navigator.userAgent.match(/Windows Phone/);
-};
-
-/**
  * @return {boolean} isStandaloneiOS
  */
 fb.simplelogin.util.env.isStandaloneiOS = function() {

@@ -486,7 +486,6 @@ fb.simplelogin.client.prototype.loginViaOAuth = function(provider, options, cb) 
    */
   if (options.preferRedirect ||
       fb.simplelogin.util.env.isChromeiOS() ||
-      fb.simplelogin.util.env.isWindowsPhone() ||
       fb.simplelogin.util.env.isStandaloneiOS() ||
       fb.simplelogin.util.env.isTwitteriOS() ||
       fb.simplelogin.util.env.isFacebookiOS()) {
