@@ -1677,7 +1677,7 @@ fb.simplelogin.util.env.hasSessionStorage = function(str) {
   return false;
 };
 fb.simplelogin.util.env.isMobileCordovaInAppBrowser = function() {
-  return(window["cordova"] || (window["CordovaInAppBrowser"] || window["phonegap"])) && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+  return window["cordova"] || (window["CordovaInAppBrowser"] || window["phonegap"]);
 };
 fb.simplelogin.util.env.isMobileTriggerIoTab = function() {
   return window["forge"] && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);

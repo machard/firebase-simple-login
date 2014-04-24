@@ -36,8 +36,8 @@ goog.provide('fb.simplelogin.util.env');
  * @return {boolean} isMobileCordovaInAppBrowser
  */
 fb.simplelogin.util.env.isMobileCordovaInAppBrowser = function() {
-  return (window['cordova'] || window['CordovaInAppBrowser'] || window['phonegap'])
-    && /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
+  return (window['cordova'] || window['CordovaInAppBrowser'] || window['phonegap']);
+    //&& /ios|iphone|ipod|ipad|android/i.test(navigator.userAgent);
 };
 
 /**
